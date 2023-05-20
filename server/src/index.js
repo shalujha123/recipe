@@ -11,6 +11,9 @@ dotenv.config();
 
 app.use(express.json());
 app.use(cors());
+app.get("/", (req,res) => {
+  res.send("Welcome to recipe API")
+})
 
 app.use('/auth', userRouter);
 app.use('/recipes', recipesRouter);
